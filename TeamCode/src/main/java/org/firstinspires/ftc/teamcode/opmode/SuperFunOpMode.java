@@ -1,7 +1,6 @@
 package org.firstinspires.ftc.teamcode.opmode;
 
 import com.seattlesolvers.solverslib.command.CommandOpMode;
-import com.seattlesolvers.solverslib.command.InstantCommand;
 import com.seattlesolvers.solverslib.gamepad.GamepadEx;
 import com.seattlesolvers.solverslib.gamepad.GamepadKeys;
 
@@ -20,6 +19,5 @@ public class SuperFunOpMode extends CommandOpMode {
         this.servoCommand = new ServoCommand(servoSubsystem);
 
         operator.getGamepadButton(GamepadKeys.Button.B).whenPressed(servoCommand);
-        operator.getGamepadButton(GamepadKeys.Button.A).whenPressed(new InstantCommand(() -> servoSubsystem.move(.25)));
     }
 }

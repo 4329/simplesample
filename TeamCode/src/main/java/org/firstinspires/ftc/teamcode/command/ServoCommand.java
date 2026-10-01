@@ -18,7 +18,7 @@ public class ServoCommand extends CommandBase {
 
     @Override
     public void execute() {
-        servoSubsystem.move(.5);
+        servoSubsystem.move(.75);
     }
 
     @Override
