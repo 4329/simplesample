@@ -12,9 +12,10 @@ public class ServoCommand extends CommandBase {
         addRequirements(servoSubsystem);
     }
 
-    @Override
+   /* @Override
     public void initialize() {
     }
+    */
 
     @Override
     public void execute() {

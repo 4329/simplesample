@@ -1,17 +1,17 @@
 package org.firstinspires.ftc.teamcode.subsystem;
 
+import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-import com.qualcomm.robotcore.hardware.Servo;
 import com.seattlesolvers.solverslib.command.SubsystemBase;
 
 public class ServoSubsystem extends SubsystemBase {
-    private Servo servo = null;
+    private final CRServo servo;
 
     public ServoSubsystem(HardwareMap hm) {
-        this.servo = hm.get(Servo.class, "servo");
+        this.servo = hm.get(CRServo.class, "servo");
     }
 
     public void move(double position) {
-        servo.setPosition(position);
+        servo.setPower(position);
     }
 }
